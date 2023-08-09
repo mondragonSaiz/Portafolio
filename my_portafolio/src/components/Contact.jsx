@@ -10,6 +10,9 @@ function Contact({ colorTheme }) {
   const [validated, setValidated] = useState(false);
   const themeTextColor = {
     color: colorTheme ? 'white' : '#363537',
+    height: '100%',
+    margin: ' 0% 15% 0 15%',
+    paddingTop: '5%',
   };
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -23,7 +26,6 @@ function Contact({ colorTheme }) {
 
   return (
     <Form
-      className="contact_layout"
       noValidate
       validated={validated}
       onSubmit={handleSubmit}
