@@ -56,30 +56,28 @@ function MainLayout({ colorTheme }) {
           <div style={customStyle}>
             <h1>David Mondragon Saiz</h1>
             <p className="about_me" style={themeTextColor}>
-              As a dedicated web developer, I bring a versatile skill set that
-              spans both frontend and backend technologies. My expertise
-              encompasses HTML, CSS, and JavaScript, allowing me to craft
-              captivating and responsive user interfaces that seamlessly engage
-              users across various devices.
+              I'm an adept web developer skilled in both frontend and backend
+              technologies. I create captivating and responsive user interfaces
+              using HTML, CSS, and JavaScript. On the backend, I specialize in
+              Node.js and Express, crafting efficient server-side applications.
             </p>
 
             <p>
-              On the backend, I specialize in Node.js and Express, leveraging
-              these tools to build robust and efficient server-side
-              applications. My proficiency extends to databases as well, with
-              hands-on experience in MongoDB and MySQL. By skillfully working
-              with data, I ensure seamless interactions and reliable storage
-              within applications.
+              I'm well-versed in databases, including MongoDB and MySQL,
+              ensuring seamless data interactions. RESTful APIs and GraphQL are
+              my tools for enhancing functionality and data exchange.
             </p>
             <p>
-              I'm well-versed in RESTful APIs and have successfully integrated
-              them into projects to facilitate data exchange and enhance
-              functionality. Additionally, my knowledge of GraphQL empowers me
-              to create flexible and efficient APIs that enable precise data
-              retrieval and minimize over-fetching. With a strong focus on user
-              experience, functionality, and availability, I've consistently
-              developed projects that prioritize the needs and satisfaction of
-              end users.
+              My portfolio features diverse projects that prioritize user
+              experience, functionality, and availability. I blend technical
+              prowess with creativity, delivering visually appealing and
+              intuitive applications.
+            </p>
+            <p>
+              As a dedicated developer, I'm eager to contribute to dynamic teams
+              and projects, creating digital experiences that marry aesthetics
+              and functionality. I'm excited to tackle new challenges and
+              continuously refine my craft.
             </p>
           </div>
         </Col>
