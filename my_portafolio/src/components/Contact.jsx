@@ -10,7 +10,7 @@ function Contact({ colorTheme }) {
   const [validated, setValidated] = useState(false);
   const themeTextColor = {
     color: colorTheme ? 'white' : '#363537',
-    height: '100%',
+    height: '100vh',
     margin: ' 0% 15% 0 15%',
     paddingTop: '5%',
   };
