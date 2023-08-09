@@ -1,0 +1,9 @@
+.contact_layout {
+  height: 100vh;
+
+  margin: 0% 15% 0 15%;
+  padding-top: 5%;
+}
+.message_input {
+  height: 200px;
+}

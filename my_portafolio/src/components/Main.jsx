@@ -2,39 +2,46 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import profilePic from '../images/howl.jpeg';
-import { useTheme } from '../utils/ThemeContext';
+import { useTheme, ThemeContext } from '../utils/ThemeContext';
 import { reducer } from '../utils/reducers';
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useContext } from 'react';
 import './css/main.css';
 import { BsStackOverflow } from 'react-icons/bs';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import designLogo from '../images/webDesign.svg';
-import reactLogo from '../images/toolImages/reactTool.svg';
-import nodeLogo from '../images/toolImages/nodeTool.svg';
-import mongoLogo from '../images/toolImages/mongoTool.svg';
-import handlebarsLogo from '../images/toolImages/handlebarsTool.svg';
-import mysqlLogo from '../images/toolImages/mysqlTool.svg';
-import jqueryLogo from '../images/toolImages/jqueryTool.svg';
-import techLogo from '../images/toolImages/rocketLogo.svg';
-import figmaLogo from '../images/toolImages/figmaLogo.svg';
-import adobeLogo from '../images/toolImages/adobeLogo.svg';
-import xdLogo from '../images/toolImages/xdLogo.svg';
-import expressLogo from '../images/toolImages/expressLogo.svg';
+import profilePic from '../assets/images/howl.jpeg';
+import designLogo from '../assets/images/webDesign.svg';
+import reactLogo from '../assets/images/toolImages/reactTool.svg';
+import nodeLogo from '../assets/images/toolImages/nodeTool.svg';
+import mongoLogo from '../assets/images/toolImages/mongoTool.svg';
+import handlebarsLogo from '../assets/images/toolImages/handlebarsTool.svg';
+import mysqlLogo from '../assets/images/toolImages/mysqlTool.svg';
+import jqueryLogo from '../assets/images/toolImages/jqueryTool.svg';
+import techLogo from '../assets/images/toolImages/rocketLogo.svg';
+import figmaLogo from '../assets/images/toolImages/figmaLogo.svg';
+import adobeLogo from '../assets/images/toolImages/adobeLogo.svg';
+import xdLogo from '../assets/images/toolImages/xdLogo.svg';
+import expressLogo from '../assets/images/toolImages/expressLogo.svg';
 import Card from './Card';
 
-function MainLayout() {
-  const initialState = useTheme();
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const themStyle = {
-    backgroundColor: state.darkTheme ? '#363537' : '#F8F9FA',
-    marginRight: 'auto',
-    marginLeft: 'auto',
-  };
+function MainLayout({ colorTheme }) {
+  // const initialState = useTheme();
+  // const [state, dispatch] = useReducer(reducer, initialState);
+  // const { darkTheme } = useContext(ThemeContext);
+  // const themStyle = {
+  //   backgroundColor: darkTheme ? '#363537' : '#F8F9FA',
+  //   marginRight: 'auto',
+  //   marginLeft: 'auto',
+  // };
 
-  console.log(state.darkTheme);
+  // console.log('dark theme', darkTheme);
+  const themeTextColor = {
+    color: colorTheme ? 'white' : '#363537',
+  };
+  const iconsColor = {
+    color: colorTheme ? 'white' : '#363537',
+  };
   const customStyle = {
-    color: '#363537',
+    color: colorTheme ? 'white' : '#363537',
     marginTop: '20%',
   };
   <style>
@@ -43,12 +50,12 @@ function MainLayout() {
   </style>;
 
   return (
-    <Container className="main_layout">
+    <Container className="main_layout" style={{ color: 'white' }}>
       <Row>
         <Col sm={4} md={5} lg={7}>
           <div style={customStyle}>
             <h1>David Mondragon Saiz</h1>
-            <p className="about_me">
+            <p className="about_me" style={themeTextColor}>
               As a computer systems engineer with a year of experience in web
               development, I am passionate about the transformative power of
               software. I believe that well-designed applications have the
@@ -80,7 +87,7 @@ function MainLayout() {
           >
             <AiFillLinkedin className="cursor-pointer hover:text-slate-600" />
           </a>
-          <a href="#">
+          <a href="https://stackoverflow.com/users/17744148/david-mondragon">
             <BsStackOverflow
               className="cursor-pointer hover:text-slate-600"
               target="_blank"
@@ -91,7 +98,7 @@ function MainLayout() {
 
       <Row>
         <Col sm={4} md={6} lg={6}>
-          <Card>
+          <div className="card radial-repeating">
             <div
               style={{
                 textAlign: 'center',
@@ -113,27 +120,24 @@ function MainLayout() {
               style={{
                 textAlign: 'center',
                 display: 'flex',
-                flexWrap: 'wrap',
-                padding: '5%',
-                justifyContent: 'space-between',
+                padding: '4% 10% 4% 10%',
+                justifyContent: 'space-evenly',
                 cursor: 'pointer',
               }}
             >
               <img
-                className="tool_img"
                 alt=""
                 src={mongoLogo}
                 width="40"
                 height="40"
-                className="d-inline-block align-top"
+                className="d-inline-block align-top tool_img"
               />
               <img
-                className="tool_img"
                 alt=""
                 src={expressLogo}
                 width="40"
                 height="40"
-                className="d-inline-block align-top"
+                className="d-inline-block align-top tool_img"
               />
 
               <img
@@ -172,11 +176,11 @@ function MainLayout() {
                 className="d-inline-block align-top tool_img"
               />
             </div>
-          </Card>
+          </div>
         </Col>
 
         <Col sm={4} md={6} lg={6}>
-          <Card>
+          <div className="card radial-repeating">
             <div
               style={{
                 textAlign: 'center',
@@ -198,7 +202,7 @@ function MainLayout() {
                 textAlign: 'center',
                 display: 'flex',
                 flexWrap: 'wrap',
-                padding: '5%',
+                padding: '4% 10% 4% 10%',
                 justifyContent: 'space-between',
                 cursor: 'pointer',
               }}
@@ -225,7 +229,7 @@ function MainLayout() {
                 className="d-inline-block align-top tool_img"
               />
             </div>
-          </Card>
+          </div>
         </Col>
       </Row>
     </Container>

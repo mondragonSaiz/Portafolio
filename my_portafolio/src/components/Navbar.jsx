@@ -6,25 +6,24 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useTheme } from '../utils/ThemeContext';
 import { reducer } from '../utils/reducers';
 import { TOGGLE_THEME } from '../utils/actions';
-import logo from '../images/logo_portafolio.png';
+import logo from '../assets/images/logo_portafolio.png';
 import './css/navbar.css';
-// import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState, useReducer } from 'react';
 
-function Mynav({ currentPage, handlePageChange }) {
+function Mynav({ currentPage, handlePageChange, colorTheme, setColorTheme }) {
   const initialState = useTheme();
 
   const [state, dispatch] = useReducer(reducer, initialState);
   const toggleThemeIconStyle = {
-    color: state.darkTheme ? '#EBBA17' : 'Black',
+    color: colorTheme ? 'Black' : '#EBBA17',
   };
   return (
     <Navbar
       expand="lg"
-      bg={state.darkTheme ? 'dark' : 'light'}
-      data-bs-theme={state.darkTheme ? 'dark' : 'light'}
+      bg={colorTheme ? 'light' : 'dark'}
+      data-bs-theme={colorTheme ? 'light' : 'dark'}
     >
       <Container fluid>
         <Navbar.Brand href="#home" onClick={() => handlePageChange('Home')}>
@@ -55,15 +54,16 @@ function Mynav({ currentPage, handlePageChange }) {
             >
               Contact
             </Nav.Link>
+            <Nav.Link href="#Resume" onClick={() => handlePageChange('Resume')}>
+              Resume
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <li>
               <GiMoon
                 style={toggleThemeIconStyle}
                 className="themLogo"
-                onClick={() =>
-                  dispatch({ type: TOGGLE_THEME, payload: state.darkTheme })
-                }
+                onClick={() => setColorTheme(!colorTheme)}
               />
             </li>
           </Form>

@@ -3,12 +3,12 @@ import './css/portafolio.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import roomieHunt from '../images/projectImgaes/roomieHunt.png';
-import myFigure from '../images/projectImgaes/myfigureCollection.png';
-import techBlog from '../images/projectImgaes/techblog.png';
-import timedQuiz from '../images/projectImgaes/timedQuiz.png';
-import weatherDashboard from '../images/projectImgaes/weatherDashboard.png';
-import fridge2table from '../images/projectImgaes/fridge2tablee.png';
+import roomieHunt from '../assets/images/projectImgaes/roomieHunt.png';
+import myFigure from '../assets/images/projectImgaes/myfigureCollection.png';
+import techBlog from '../assets/images/projectImgaes/techblog.png';
+import timedQuiz from '../assets/images/projectImgaes/timedQuiz.png';
+import weatherDashboard from '../assets/images/projectImgaes/weatherDashboard.png';
+import fridge2table from '../assets/images/projectImgaes/fridge2tablee.png';
 export default function Portafolio() {
   const customCards = [
     {
