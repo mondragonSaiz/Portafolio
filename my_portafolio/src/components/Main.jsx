@@ -42,7 +42,7 @@ function MainLayout({ colorTheme }) {
   };
   const customStyle = {
     color: colorTheme ? 'white' : '#363537',
-    marginTop: '20%',
+    marginTop: '10%',
   };
   <style>
     @import
@@ -56,12 +56,30 @@ function MainLayout({ colorTheme }) {
           <div style={customStyle}>
             <h1>David Mondragon Saiz</h1>
             <p className="about_me" style={themeTextColor}>
-              As a computer systems engineer with a year of experience in web
-              development, I am passionate about the transformative power of
-              software. I believe that well-designed applications have the
-              potential to significantly improve our lives and solve complex
-              problems. Throughout my career, I have cultivated a strong skill
-              set in developing high-quality, user-centric applications.
+              As a dedicated web developer, I bring a versatile skill set that
+              spans both frontend and backend technologies. My expertise
+              encompasses HTML, CSS, and JavaScript, allowing me to craft
+              captivating and responsive user interfaces that seamlessly engage
+              users across various devices.
+            </p>
+
+            <p>
+              On the backend, I specialize in Node.js and Express, leveraging
+              these tools to build robust and efficient server-side
+              applications. My proficiency extends to databases as well, with
+              hands-on experience in MongoDB and MySQL. By skillfully working
+              with data, I ensure seamless interactions and reliable storage
+              within applications.
+            </p>
+            <p>
+              I'm well-versed in RESTful APIs and have successfully integrated
+              them into projects to facilitate data exchange and enhance
+              functionality. Additionally, my knowledge of GraphQL empowers me
+              to create flexible and efficient APIs that enable precise data
+              retrieval and minimize over-fetching. With a strong focus on user
+              experience, functionality, and availability, I've consistently
+              developed projects that prioritize the needs and satisfaction of
+              end users.
             </p>
           </div>
         </Col>
