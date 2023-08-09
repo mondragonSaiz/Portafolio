@@ -43,205 +43,192 @@ function MainLayout() {
   </style>;
 
   return (
-    <div
-      className="main_layout"
-      style={{
-        backgroundColor: state.darkTheme ? '#000000' : '#F0F0F0',
-        color: 'black',
-      }}
-    >
-      <Container>
-        <Row>
-          <Col sm={4} md={5} lg={7}>
-            <div style={customStyle}>
-              <h1>David Mondragon Saiz</h1>
-              <p className="about_me">
-                As a computer systems engineer with a year of experience in web
-                development, I am passionate about the transformative power of
-                software. I believe that well-designed applications have the
-                potential to significantly improve our lives and solve complex
-                problems. Throughout my career, I have cultivated a strong skill
-                set in developing high-quality, user-centric applications.
-              </p>
-            </div>
-          </Col>
-          <Col sm={4} md={5} lg={5}>
-            <div className="image_div">
-              <Image
-                className="profile_image"
-                src={profilePic}
-                thumbnail
-                alt="profle-pic"
-              />
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <div className="network_icons">
-            <a href="https://github.com/mondragonSaiz" target="_blank">
-              <AiFillGithub className="cursor-pointer hover:text-slate-500" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/davidmondragonsaiz/"
-              target="_blank"
-            >
-              <AiFillLinkedin className="cursor-pointer hover:text-slate-600" />
-            </a>
-            <a href="#">
-              <BsStackOverflow
-                className="cursor-pointer hover:text-slate-600"
-                target="_blank"
-              />
-            </a>
+    <Container className="main_layout">
+      <Row>
+        <Col sm={4} md={5} lg={7}>
+          <div style={customStyle}>
+            <h1>David Mondragon Saiz</h1>
+            <p className="about_me">
+              As a computer systems engineer with a year of experience in web
+              development, I am passionate about the transformative power of
+              software. I believe that well-designed applications have the
+              potential to significantly improve our lives and solve complex
+              problems. Throughout my career, I have cultivated a strong skill
+              set in developing high-quality, user-centric applications.
+            </p>
           </div>
-        </Row>
+        </Col>
+        <Col sm={4} md={5} lg={5}>
+          <div className="image_div">
+            <Image
+              className="profile_image"
+              src={profilePic}
+              thumbnail
+              alt="profle-pic"
+            />
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <div className="network_icons">
+          <a href="https://github.com/mondragonSaiz" target="_blank">
+            <AiFillGithub className="cursor-pointer hover:text-slate-500" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/davidmondragonsaiz/"
+            target="_blank"
+          >
+            <AiFillLinkedin className="cursor-pointer hover:text-slate-600" />
+          </a>
+          <a href="#">
+            <BsStackOverflow
+              className="cursor-pointer hover:text-slate-600"
+              target="_blank"
+            />
+          </a>
+        </div>
+      </Row>
 
-        <Row>
-          <Col sm={4} md={6} lg={6}>
-            <Card>
-              <div
-                style={{
-                  textAlign: 'center',
-                  paddingTop: '2%',
-                }}
-              >
-                <img
-                  className="tool_img"
-                  alt=""
-                  src={techLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <h3> Technologies </h3>
-              </div>
+      <Row>
+        <Col sm={4} md={6} lg={6}>
+          <Card>
+            <div
+              style={{
+                textAlign: 'center',
+                paddingTop: '2%',
+              }}
+            >
+              <img
+                className="tool_img"
+                alt=""
+                src={techLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top"
+              />
+              <h3> Technologies </h3>
+            </div>
 
-              <div
-                style={{
-                  textAlign: 'center',
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  padding: '5%',
-                  justifyContent: 'space-between',
-                  cursor: 'pointer',
-                }}
-              >
-                <img
-                  className="tool_img"
-                  alt=""
-                  src={mongoLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <img
-                  className="tool_img"
-                  alt=""
-                  src={expressLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
+            <div
+              style={{
+                textAlign: 'center',
+                display: 'flex',
+                flexWrap: 'wrap',
+                padding: '5%',
+                justifyContent: 'space-between',
+                cursor: 'pointer',
+              }}
+            >
+              <img
+                className="tool_img"
+                alt=""
+                src={mongoLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top"
+              />
+              <img
+                className="tool_img"
+                alt=""
+                src={expressLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top"
+              />
 
-                <img
-                  className="tool_img"
-                  alt=""
-                  src={reactLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <img
-                  className="tool_img"
-                  alt=""
-                  src={nodeLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <img
-                  className="tool_img"
-                  alt=""
-                  src={handlebarsLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <img
-                  className="tool_img"
-                  alt=""
-                  src={mysqlLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <img
-                  className="tool_img"
-                  alt=""
-                  src={jqueryLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-              </div>
-            </Card>
-          </Col>
+              <img
+                alt=""
+                src={reactLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top tool_img"
+              />
+              <img
+                alt=""
+                src={nodeLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top tool_img"
+              />
+              <img
+                alt=""
+                src={handlebarsLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top tool_img"
+              />
+              <img
+                alt=""
+                src={mysqlLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top tool_img"
+              />
+              <img
+                alt=""
+                src={jqueryLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top tool_img"
+              />
+            </div>
+          </Card>
+        </Col>
 
-          <Col sm={4} md={6} lg={6}>
-            <Card>
-              <div
-                style={{
-                  textAlign: 'center',
-                  paddingTop: '2%',
-                }}
-              >
-                <img
-                  alt=""
-                  src={designLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <h3>UI /UX Design</h3>
-              </div>
+        <Col sm={4} md={6} lg={6}>
+          <Card>
+            <div
+              style={{
+                textAlign: 'center',
+                paddingTop: '2%',
+              }}
+            >
+              <img
+                alt=""
+                src={designLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top"
+              />
+              <h3>UI /UX Design</h3>
+            </div>
 
-              <div
-                style={{
-                  textAlign: 'center',
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  padding: '5%',
-                  justifyContent: 'space-between',
-                  cursor: 'pointer',
-                }}
-              >
-                <img
-                  alt=""
-                  src={figmaLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <img
-                  alt=""
-                  src={adobeLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-                <img
-                  alt=""
-                  src={xdLogo}
-                  width="40"
-                  height="40"
-                  className="d-inline-block align-top"
-                />
-              </div>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            <div
+              style={{
+                textAlign: 'center',
+                display: 'flex',
+                flexWrap: 'wrap',
+                padding: '5%',
+                justifyContent: 'space-between',
+                cursor: 'pointer',
+              }}
+            >
+              <img
+                alt=""
+                src={figmaLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top tool_img"
+              />
+              <img
+                alt=""
+                src={adobeLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top tool_img"
+              />
+              <img
+                alt=""
+                src={xdLogo}
+                width="40"
+                height="40"
+                className="d-inline-block align-top tool_img"
+              />
+            </div>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

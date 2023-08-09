@@ -27,16 +27,14 @@ function Mynav({ currentPage, handlePageChange }) {
       data-bs-theme={state.darkTheme ? 'dark' : 'light'}
     >
       <Container fluid>
-        <Navbar.Brand href="#">
-          <Nav.Link href="#home" onClick={() => handlePageChange('Home')}>
-            <img
-              alt=""
-              src={logo}
-              width="40"
-              height="40"
-              className="d-inline-block align-top"
-            />
-          </Nav.Link>
+        <Navbar.Brand href="#home" onClick={() => handlePageChange('Home')}>
+          <img
+            alt=""
+            src={logo}
+            width="40"
+            height="40"
+            className="d-inline-block align-top"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
