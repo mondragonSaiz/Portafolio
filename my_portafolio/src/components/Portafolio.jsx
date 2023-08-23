@@ -16,7 +16,7 @@ export default function Portafolio() {
       imgSrc: goalhub,
       title: 'GoalHub',
       text: 'Write, plan, collaborate and organize your goals. - GoalHub is all you need - in one space.',
-      link: 'https://mondragonsaiz.github.io/weather-dashboard/',
+      link: 'https://goalhub-5f7766233267.herokuapp.com/',
     },
     {
       imgSrc: roomieHunt,
