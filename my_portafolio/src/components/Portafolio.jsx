@@ -9,8 +9,15 @@ import techBlog from '../assets/images/projectImgaes/techblog.png';
 import timedQuiz from '../assets/images/projectImgaes/timedQuiz.png';
 import weatherDashboard from '../assets/images/projectImgaes/weatherDashboard.png';
 import fridge2table from '../assets/images/projectImgaes/fridge2tablee.png';
+import goalhub from '../assets/images/projectImgaes/goalhub.png';
 export default function Portafolio() {
   const customCards = [
+    {
+      imgSrc: goalhub,
+      title: 'GoalHub',
+      text: 'Write, plan, collaborate and organize your goals. - GoalHub is all you need - in one space.',
+      link: 'https://mondragonsaiz.github.io/weather-dashboard/',
+    },
     {
       imgSrc: roomieHunt,
       title: 'RoomieHunt',
