@@ -6,10 +6,16 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import './css/contact.css';
 
-function Contact({ colorTheme }) {
+import { useContext } from 'react';
+import { ThemeContext } from '../utils/ThemeContext';
+
+function Contact() {
+  const ctx = useContext(ThemeContext);
+  const { themeGlobalState } = ctx;
+
   const [validated, setValidated] = useState(false);
   const themeTextColor = {
-    color: colorTheme ? 'white' : '#363537',
+    color: themeGlobalState.darkTheme ? 'white' : '#363537',
     height: '100vh',
     margin: ' 0% 15% 0 15%',
     paddingTop: '5%',

@@ -10,6 +10,10 @@ import timedQuiz from '../assets/images/projectImgaes/timedQuiz.png';
 import weatherDashboard from '../assets/images/projectImgaes/weatherDashboard.png';
 import fridge2table from '../assets/images/projectImgaes/fridge2tablee.png';
 import goalhub from '../assets/images/projectImgaes/goalhub.png';
+
+import { useContext } from 'react';
+import { ThemeContext } from '../utils/ThemeContext';
+
 export default function Portafolio() {
   const customCards = [
     {

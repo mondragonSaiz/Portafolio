@@ -2,9 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import { useTheme, ThemeContext } from '../utils/ThemeContext';
-import { reducer } from '../utils/reducers';
-import { useState, useReducer, useContext } from 'react';
+
 import './css/main.css';
 import { BsStackOverflow } from 'react-icons/bs';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
@@ -21,27 +19,22 @@ import figmaLogo from '../assets/images/toolImages/figmaLogo.svg';
 import adobeLogo from '../assets/images/toolImages/adobeLogo.svg';
 import xdLogo from '../assets/images/toolImages/xdLogo.svg';
 import expressLogo from '../assets/images/toolImages/expressLogo.svg';
-import Card from './Card';
 
-function MainLayout({ colorTheme }) {
-  // const initialState = useTheme();
-  // const [state, dispatch] = useReducer(reducer, initialState);
-  // const { darkTheme } = useContext(ThemeContext);
-  // const themStyle = {
-  //   backgroundColor: darkTheme ? '#363537' : '#F8F9FA',
-  //   marginRight: 'auto',
-  //   marginLeft: 'auto',
-  // };
+import { useContext } from 'react';
+import { ThemeContext } from '../utils/ThemeContext';
 
-  // console.log('dark theme', darkTheme);
+function MainLayout() {
+  const ctx = useContext(ThemeContext);
+  const { themeGlobalState } = ctx;
+  console.log(themeGlobalState);
   const themeTextColor = {
-    color: colorTheme ? 'white' : '#363537',
+    color: themeGlobalState.darkTheme ? 'white' : '#363537',
   };
   const iconsColor = {
-    color: colorTheme ? 'white' : '#363537',
+    color: themeGlobalState.darkTheme ? 'white' : '#363537',
   };
   const customStyle = {
-    color: colorTheme ? 'white' : '#363537',
+    color: themeGlobalState.darkTheme ? 'white' : '#363537',
     marginTop: '10%',
   };
   <style>
@@ -95,16 +88,23 @@ function MainLayout({ colorTheme }) {
       <Row>
         <div className="network_icons">
           <a href="https://github.com/mondragonSaiz" target="_blank">
-            <AiFillGithub className="cursor-pointer hover:text-slate-500" />
+            <AiFillGithub
+              size="2rem"
+              className="cursor-pointer hover:text-slate-500 "
+            />
           </a>
           <a
             href="https://www.linkedin.com/in/davidmondragonsaiz/"
             target="_blank"
           >
-            <AiFillLinkedin className="cursor-pointer hover:text-slate-600" />
+            <AiFillLinkedin
+              size="2rem"
+              className="cursor-pointer hover:text-slate-600"
+            />
           </a>
           <a href="https://stackoverflow.com/users/17744148/david-mondragon">
             <BsStackOverflow
+              size="2rem"
               className="cursor-pointer hover:text-slate-600"
               target="_blank"
             />

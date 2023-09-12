@@ -3,27 +3,25 @@ import Nav from 'react-bootstrap/Nav';
 import { BsFillMoonFill } from 'react-icons/bs';
 import { GiMoon } from 'react-icons/gi';
 import Navbar from 'react-bootstrap/Navbar';
-import { useTheme } from '../utils/ThemeContext';
-import { reducer } from '../utils/reducers';
-import { TOGGLE_THEME } from '../utils/actions';
+
 import logo from '../assets/images/logo_portafolio.png';
 import './css/navbar.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useState, useReducer } from 'react';
 
-function Mynav({ currentPage, handlePageChange, colorTheme, setColorTheme }) {
-  const initialState = useTheme();
-
-  const [state, dispatch] = useReducer(reducer, initialState);
+import { useContext } from 'react';
+import { ThemeContext } from '../utils/ThemeContext';
+function Mynav({ handlePageChange }) {
+  const ctxTheme = useContext(ThemeContext);
+  const { themeGlobalState, dispatch } = ctxTheme;
   const toggleThemeIconStyle = {
-    color: colorTheme ? 'Black' : '#EBBA17',
+    color: themeGlobalState.darkTheme ? 'Black' : '#EBBA17',
   };
   return (
     <Navbar
       expand="lg"
-      bg={colorTheme ? 'light' : 'dark'}
-      data-bs-theme={colorTheme ? 'light' : 'dark'}
+      bg={themeGlobalState.darkTheme ? 'light' : 'dark'}
+      data-bs-theme={themeGlobalState.darkTheme ? 'light' : 'dark'}
     >
       <Container fluid>
         <Navbar.Brand href="#home" onClick={() => handlePageChange('Home')}>
@@ -63,7 +61,12 @@ function Mynav({ currentPage, handlePageChange, colorTheme, setColorTheme }) {
               <GiMoon
                 style={toggleThemeIconStyle}
                 className="themLogo"
-                onClick={() => setColorTheme(!colorTheme)}
+                onClick={() =>
+                  dispatch({
+                    type: 'TOGGLE_ACTION',
+                    payload: !themeGlobalState.darkTheme,
+                  })
+                }
               />
             </li>
           </Form>

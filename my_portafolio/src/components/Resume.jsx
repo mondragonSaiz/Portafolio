@@ -2,11 +2,17 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
-import myResume from '../assets/files/LDMS-CV-2023-07.pdf';
+import myResume from '../assets/files/LuisDavidMondragonSaiz-23-09.pdf';
 import './css/resume.css';
-export default function Resume({ colorTheme }) {
+
+import { useContext } from 'react';
+import { ThemeContext } from '../utils/ThemeContext';
+
+export default function Resume() {
+  const ctx = useContext(ThemeContext);
+  const { themeGlobalState } = ctx;
   const themeTextColor = {
-    color: colorTheme ? 'white' : '#363537',
+    color: themeGlobalState.darkTheme ? 'white' : '#363537',
   };
   return (
     <div className="resume_container" style={themeTextColor}>
@@ -54,7 +60,7 @@ export default function Resume({ colorTheme }) {
         </Card>
       </div>
       <Button
-        variant={colorTheme ? 'light' : 'dark'}
+        variant={themeGlobalState.darkTheme ? 'light' : 'dark'}
         style={{
           marginTop: '5%',
           boxShadow: 'rgb(38, 57, 77) 0px 20px 30px -10px',
