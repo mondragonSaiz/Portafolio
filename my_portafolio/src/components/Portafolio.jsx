@@ -15,6 +15,8 @@ import { useContext } from 'react';
 import { ThemeContext } from '../utils/ThemeContext';
 
 export default function Portafolio() {
+  const ctx = useContext(ThemeContext);
+  const { themeGlobalState } = ctx;
   const customCards = [
     {
       imgSrc: goalhub,
