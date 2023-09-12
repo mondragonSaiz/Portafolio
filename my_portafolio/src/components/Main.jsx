@@ -29,6 +29,9 @@ function MainLayout() {
   console.log(themeGlobalState);
   const themeTextColor = {
     color: themeGlobalState.darkTheme ? 'white' : '#363537',
+    fontWeight: 'bold',
+    fontSize: 'medium',
+    textAlign: 'justify',
   };
   const iconsColor = {
     color: themeGlobalState.darkTheme ? 'white' : '#363537',
@@ -55,18 +58,18 @@ function MainLayout() {
               Node.js and Express, crafting efficient server-side applications.
             </p>
 
-            <p>
+            <p style={themeTextColor}>
               I'm well-versed in databases, including MongoDB and MySQL,
               ensuring seamless data interactions. RESTful APIs and GraphQL are
               my tools for enhancing functionality and data exchange.
             </p>
-            <p>
+            <p style={themeTextColor}>
               My portfolio features diverse projects that prioritize user
               experience, functionality, and availability. I blend technical
               prowess with creativity, delivering visually appealing and
               intuitive applications.
             </p>
-            <p>
+            <p style={themeTextColor}>
               As a dedicated developer, I'm eager to contribute to dynamic teams
               and projects, creating digital experiences that marry aesthetics
               and functionality. I'm excited to tackle new challenges and
