@@ -31,14 +31,16 @@ export default function Resume() {
             </Card.Title>
           </Card.Body>
           <ListGroup variant="flush">
+            <ListGroup.Item>React.js</ListGroup.Item>
             <ListGroup.Item>HTML</ListGroup.Item>
             <ListGroup.Item>CSS</ListGroup.Item>
             <ListGroup.Item>JavaScript</ListGroup.Item>
             <ListGroup.Item>Jquery</ListGroup.Item>
             <ListGroup.Item>Bootstrap</ListGroup.Item>
             <ListGroup.Item>Tailwind CSS</ListGroup.Item>
-            <ListGroup.Item>Responsive Designs</ListGroup.Item>
-            <ListGroup.Item> Progressive Web App (PWA)</ListGroup.Item>
+            <ListGroup.Item>Radix UI</ListGroup.Item>
+            <ListGroup.Item>Adobe xd</ListGroup.Item>
+            <ListGroup.Item>Figma</ListGroup.Item>
           </ListGroup>
         </Card>
         <Card style={{ width: '18rem', marginTop: '2%' }}>
@@ -48,13 +50,15 @@ export default function Resume() {
             </Card.Title>
           </Card.Body>
           <ListGroup variant="flush">
-            <ListGroup.Item>API's</ListGroup.Item>
             <ListGroup.Item>Node</ListGroup.Item>
             <ListGroup.Item>Express</ListGroup.Item>
             <ListGroup.Item>MySQL, Sequelize</ListGroup.Item>
             <ListGroup.Item>MongoDB, Mongoose</ListGroup.Item>
+            <ListGroup.Item>API's</ListGroup.Item>
             <ListGroup.Item>REST</ListGroup.Item>
             <ListGroup.Item>GraphQL</ListGroup.Item>
+            <ListGroup.Item>Apollo Server</ListGroup.Item>
+            <ListGroup.Item>TanStack</ListGroup.Item>
             <ListGroup.Item>Java</ListGroup.Item>
           </ListGroup>
         </Card>

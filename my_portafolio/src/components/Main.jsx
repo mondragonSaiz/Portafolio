@@ -29,7 +29,7 @@ function MainLayout() {
   console.log(themeGlobalState);
   const themeTextColor = {
     color: themeGlobalState.darkTheme ? 'white' : '#363537',
-    fontWeight: 'bold',
+    fontWeight: '600',
     fontSize: 'medium',
     textAlign: 'justify',
   };
@@ -50,7 +50,7 @@ function MainLayout() {
       <Row>
         <Col sm={4} md={5} lg={7}>
           <div style={customStyle}>
-            <h1>David Mondragon Saiz</h1>
+            <h1 style={{ fontWeight: 'bold' }}>David Mondragon Saiz</h1>
             <p className="about_me" style={themeTextColor}>
               I'm an adept web developer skilled in both frontend and backend
               technologies. I create captivating and responsive user interfaces
