@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import roomieHunt from '../assets/images/projectImgaes/roomieHunt.png';
-import myFigure from '../assets/images/projectImgaes/myfigureCollection.png';
+import myFigure from '../assets/images/projectImgaes/nerdvault.png';
 import techBlog from '../assets/images/projectImgaes/techblog.png';
 import timedQuiz from '../assets/images/projectImgaes/timedQuiz.png';
 import weatherDashboard from '../assets/images/projectImgaes/weatherDashboard.png';
@@ -40,7 +40,7 @@ export default function Portafolio() {
       imgSrc: myFigure,
       title: 'MyFigureCollection',
       text: 'user-friendly app designed for figure collectors to easily manage and track their collections.',
-      link: 'https://github.com/mondragonSaiz/myFigure_Collection',
+      link: 'https://nerdvault88-4fc6656e3722.herokuapp.com/',
     },
 
     {
